@@ -1,0 +1,13 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+
+        <body>
+            <h1>Main Page</h1>
+
+            <form action="http://localhost:3000/main/try" method="post" id="recipeForm">
+                <button type="submit" class="btn btn-secondary" id="addingButton">Press to find a recipe!</button>
+            </form>
+            <%- include('partials/scripts') %>
+        </body>
+
+        </html>

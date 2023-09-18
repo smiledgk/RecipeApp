@@ -1,0 +1,78 @@
+body {
+    background-color: lightblue;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#addingButton,
+#showingButton {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.card-body {
+    text-align: center;
+}
+
+#recipeCard {
+    margin: 2%;
+}
+
+#recipeCard h2 {
+    text-align: center;
+}
+
+#recipeCard #cardTitle {
+    font-size: x-large;
+}
+
+#recipeCard .tags {
+    display: flex;
+    justify-content: space-between;
+}
+
+#recipeCard #fullDescr {
+    margin-top: 10%;
+    text-align: center;
+}
+
+#recipeCard #cardImage {
+    margin: 1%
+}
+
+.buttonsConduct {
+    display: flex;
+    justify-content: right;
+    margin-top: 8%;
+}
+
+#foodImage {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 540px;
+}
+
+.inline {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#showRecipe {
+    margin-top: 2%;
+}
+
+.rating {
+    display: flex;
+    justify-content: right;
+}
+
+.rating input {
+    margin-left: 1%;
+}

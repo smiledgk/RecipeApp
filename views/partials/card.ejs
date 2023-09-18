@@ -1,0 +1,37 @@
+<div class="col-md-6">
+    <div class="card mb-3" style="max-width: 760px" id="recipeCard">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <img src=<%=recipe.thumbnail %> class="card-img" id="cardImage"alt="...">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h3 class="card-title" id="cardTitle">
+                        <b>
+                            <%= recipe.name %>
+                        </b>
+                    </h3>
+                    <span class="tags">
+                        <h6>
+                            Category - <%= recipe.category %>
+                        </h6>
+                        <h6 class="text-muted">
+                            <i>
+                                Cuisine - <%= recipe.country %>
+                            </i>
+                        </h6>
+                    </span>
+                    <br>
+                    <i><a href="/main/recipes/recipe/<%= recipe.id %>" id="fullDescr">Click to see the Recipe</a></i>
+                    <br>
+                    <br>
+                    <span class="buttonsConduct">
+                        <form method="post" action="/main/recipes/recipe/<%= recipe.id %>?_method=DELETE">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+
+        <body>
+            <h1>Here is your new Recipe!</h1>
+
+            <br>
+            <h2>
+                <%= recipe.name %>
+            </h2>
+            <div class="container" id="showRecipe">
+                <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4">
+                        <span class="inline">
+                            <form action=<%=`http://localhost:3000/main/add/${recipe.uuid}`%> method="get"
+                                id="recipeForm">
+                                <button type="submit" class="btn btn-success" id="savingButton">Save to
+                                    Favourites</button>
+                            </form>
+                            <form action="http://localhost:3000/main/try" method="post" id="recipeForm">
+                                <button type="submit" class="btn btn-warning" id="addingButton">Press to try another
+                                    recipe!</button>
+                            </form>
+                        </span>
+                    </div>
+                    <div class="col-4">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container" id="showRecipe">
+                <div class="row">
+                    <div class="col">
+                        <img src=<%=recipe.thumbnail %> alt="" id="foodImage">
+                    </div>
+                    <div class="col">
+                        <span class="inline">
+                            <h3>
+                                Category - <%= recipe.category %>
+                            </h3>
+                            <h3 class="text-muted"><i>
+                                    Cuisine - <%= recipe.country %>
+                                </i></h3>
+                        </span>
+                        <h2>Ingredients</h2>
+                        <ol>
+                            <% for (ingredient of recipe.ingredients) { %>
+                                <li>
+                                    <%= ingredient.product %> - <%= ingredient.measure %>
+                                </li>
+                                <% } %>
+                        </ol>
+                        <h2>Cooking Instruction</h2>
+                        <p>
+                            <%= recipe.descr %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <script>
+
+            </script>
+        </body>
+
+        </html>

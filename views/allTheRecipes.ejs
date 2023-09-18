@@ -1,0 +1,17 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+
+        <body>
+            <h1>Recipes</h1>
+            <div class="container">
+                <div class="row">
+                    <% for (recipe of recipes) { %>
+                        <%- include('partials/card') %>
+                            <% } %>
+                </div>
+            </div>
+
+            <%- include('partials/scripts') %>
+        </body>
+
+        </html>

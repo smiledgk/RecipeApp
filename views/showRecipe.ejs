@@ -1,0 +1,76 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+
+        <body>
+            <h1>Here is your new Recipe!</h1>
+
+            <br>
+            <h2>
+                <%= recipe.name %>
+            </h2>
+            <div class="container" id="showRecipe">
+                <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4">
+                        <form action="/main/recipes/recipe/<%= recipe.id %>?_method=DELETE" method="post"
+                            id="recipeForm">
+                            <button type="submit" class="btn btn-danger" id="removingButton">Delete a recipe!</button>
+                        </form>
+                        </span>
+                    </div>
+                    <div class="col-4" id="ratingCont">
+                        <% if (recipe.rating==0) { %>
+                            <b>
+                                <h6 style="color: rgb(0, 4, 255);">Rate the recipe below!</h6>
+                            </b>
+                            <% } else { %>
+                                <b>
+                                    <h6 style="color: red;">You rated it with <%= recipe.rating %> stars on <%=
+                                                recipe.ratingDate %>
+                                    </h6>
+                                </b>
+                                <% } %>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="showRecipe">
+                <div class="row">
+                    <div class="col">
+                        <img src=<%=recipe.thumbnail %> alt="" id="foodImage">
+                    </div>
+                    <div class="col">
+                        <span class="inline">
+                            <h3>
+                                Category - <%= recipe.category %>
+                            </h3>
+                            <h3 class="text-muted"><i>
+                                    Cuisine - <%= recipe.country %>
+                                </i></h3>
+                        </span>
+                        <h2>Ingredients</h2>
+                        <ol>
+                            <% for (ingredient of recipe.ingredients) { %>
+                                <li>
+                                    <%= ingredient.product %> - <%= ingredient.measure %>
+                                </li>
+                                <% } %>
+                        </ol>
+                        <h2>Cooking Instruction</h2>
+                        <p>
+                            <%= recipe.descr %>
+                        </p>
+                    </div>
+                    <%- include('partials/starRating') %>
+                </div>
+            </div>
+            <script>
+                const contentToAdd =
+                    ``;
+            </script>
+        </body>
+
+        </html>

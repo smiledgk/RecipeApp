@@ -1,0 +1,49 @@
+<form action="/main/recipes/recipe/<%= recipe.id %>?_method=PATCH" method="post">
+    <div class="rating">
+        <input type="radio" id="star5" name="rating" value="1">
+        <label for="star5"> 1 <i class="fas fa-star"></i></label>
+        <input type="radio" id="star4" name="rating" value="2">
+        <label for="star4"> 2 <i class="fas fa-star"></i></label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3"> 3 <i class="fas fa-star"></i></label>
+        <input type="radio" id="star2" name="rating" value="4">
+        <label for="star2"> 4 <i class="fas fa-star"></i></label>
+        <input type="radio" id="star1" name="rating" value="5">
+        <label for="star1"> 5 <i class="fas fa-star"></i></label>
+        <input type="hidden" name="submissionDate" id="submissionDate">
+        <button type="submit" class="btn btn-success" style="margin-left: 1%">Submit!</button>
+    </div>
+
+</form>
+
+
+<script>
+    /* const ratingLabels = document.querySelectorAll('.rating label');
+     console.log('hey')
+     ratingLabels.forEach((label, index) => {
+         label.addEventListener('mouseenter', () => {
+             resetStars();
+ 
+             for (let i = 0; i <= index; i++) {
+                 ratingLabels[i].classList.add('hovered');
+             }
+         });
+ 
+         label.addEventListener('click', () => {
+             for (let i = 0; i <= index; i++) {
+                 ratingLabels[i].classList.add('selected');
+                 console.log(ratingLabels[i].classList)
+             }
+ 
+             for (let i = index + 1; i < ratingLabels.length; i++) {
+                 ratingLabels[i].classList.remove('selected', 'hovered');
+             }
+         });
+     });
+ 
+     function resetStars() {
+         ratingLabels.forEach((label) => {
+             label.classList.remove('hovered');
+         });
+     }*/
+</script>
